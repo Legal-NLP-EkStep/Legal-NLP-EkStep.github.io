@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@amant555">
+    <meta name="twitter:creator" content="@amant555">
+    <meta name="twitter:title" content="RhetoricalRole: A dataset to structure indian legal judgements">
+    <meta name="twitter:description" content="RhetoricalRole dataset is a dataset with each sentence in a judgement marked with a specific rhetorical role for structuring the judgement.">
+
+    <title>RhetoricalRole Homepage</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="css/rhetoricalrole.css" rel="stylesheet">
+    
+<!--<meta name="google-site-verification" content="h3zCtOJy9KzG1XWf5-3ppU1liaJ8NkpGvK_BbOOq3-4" />-->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org/",
+  "@type":"Dataset",
+  "name":"RhetoricalRole: A dataset to structure indian legal judgements",
+  "description":"RhetoricalRole dataset is a dataset with each sentence in a judgement marked with a specific rhetorical role for structuring the judgement.",
+  "url":"https://Legal-NLP-EkStep.github.io/",
+  "keywords":[
+     "Rhetorical Role Prediction on Indian legal judgements",
+     "Natural Language Processing"
+  ],
+  "creator":{
+     "@type":"Organization",
+     "url": "https://Legal-NLP-EkStep.github.io/",
+     "name":"Thoughtworks, Ekstep",
+     "contactPoint":{
+        "@type":"ContactPoint",
+        "contactType": "customer service",
+        "url":"NA",
+        "email":"NA"
+     }
+  },
+  "distribution":[
+     {
+        "@type":"DataDownload",
+        "encodingFormat":"JSON",
+        "contentUrl":"http://googlestorageapi/train.json"
+     },
+     {
+        "@type":"DataDownload",
+        "encodingFormat":"JSON",
+        "contentUrl":"http://googlestorageapi/dev.json"
+     }
+  ]
+}
+</script>
+
+  </head>
+
+  <body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">RhetoricalRole</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+    </div>
+  </div>
+</nav>
+<!-- Page Header -->
+<header class="masthead" style="background-color: teal">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>RhetoricalRole</h1>
+          <span class="subheading">A dataset for structuring Indian legal judgements<span class="line">Rhetorical roles</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+<!-- Main Content -->
+<div class="container" id="main">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="list-group">
+        <div class="list-group-item"><h4>What is [Benchmark]?</h4>
+        <p>Description of benchmark</p>
+        <p>For more details about Structuring Indian legal judgements, please refer to our NA paper:</p>
+        <p class="text-center">
+          <a href="NA"><button type="button" class="btn btn-info">NA</button></a>
+        </p>
+        </div>
+        <div class="list-group-item"><h4>Getting started</h4>
+        <p>HotpotQA is distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>. The training and development sets can be downloaded below.</p>
+        <p class="text-center">
+          <a href="http://googlestorageapi/train.json"><button type="button" class="btn btn-success">Training set </button></a>
+        </p>
+        <p class="text-center">
+          <a href="http://googlestorageapi/dev.json"><button type="button" class="btn btn-secondary">Dev set </button></a>
+        </p>
+        <p>A more comprehensive summary about data download, preprocessing, baseline model training, and evaluation is included in our <a href="https://github.com/Legal-NLP-EkStep">GitHub repository</a>, and linked below.
+        <p class="text-center">
+          <a href="https://github.com/[TO-BE-ADDED]"><button type="button" class="btn btn-secondary">Getting started guide</button></a>
+        </p>
+        <p>
+        Once you have built your model, you can use the evaluation script we provide below to evaluate model performance by running <code>python hotpot_evaluate_v1.py &lt;path_to_prediction&gt; &lt;path_to_gold&gt;</code>
+        </p>
+        <p class="text-center">
+          <a href="https://raw.githubusercontent.com/[TO-BE-ADDED]"><button type="button" class="btn btn-secondary">Evaluation script (4.2KB)</button></a>
+        </p>
+        <p>To submit your models and evaluate them on the official test sets, please read our submission guide hosted on Codalab.</p>
+        <p class="text-center">
+          <a href="https://worksheets.codalab.org/worksheets/[TO-BE-ADDED]"><button type="button" class="btn btn-info">Submission Guide</button></a>
+        </p>
+        <p>
+        We also release the processed Wikipedia used in the process of creating HotpotQA (also under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>), serving both as the corpus for the <em>fullwiki</em> setting in our evaluation, and hopefully as a standalone resource for future researches involving processed text on Wikipedia. Below please find the link to the documentation for this corpus.
+        </p>
+        <p class="text-center">
+          <a href="wiki-readme.html"><button type="button" class="btn btn-info">Processed Wikipedia README</button></a>
+        </p>
+        </div>
+        <div class="list-group-item"><h4>Stay connected!</h4>
+        <p>Join our <a href="https://NA">Google group</a> to receive updates or initiate discussions about RhetoricalRole!</p>
+        <p>If you use RhetoricalRole in your research, please cite our paper with the following BibTeX entry</p>
+        <pre>
+@inproceedings{NA,
+  title={{RhetoricalRole}: Structuring of Indian legal judgements},
+  author={NA},
+  booktitle={NA},
+  year={NA}
+}</pre>
+    </div>
+  </div>
+</div>
+<div class="col-lg-8">
+  <div class="card card-outline-secondary">
+    <div class="card-header">
+      Leaderboard
+    </div>
+    <div class="card-body">
+      Rhetorical role benchmark
+      <table class="table table-responsive">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" rowspan=2>Rank</th>
+            <th scope="col" rowspan=2 class="align-middle text-center">Model</th>
+            <th scope="col" rowspan=2 class="align-middle text-center">Code</th>
+            <th scope="col" colspan=2 class='text-center'>Weighted-F1</th>
+          </tr>
+        </thead>
+         <colgroup>
+       <col span="1" style="width: 10%;">
+       <col span="1" style="width: 70%;">
+       <col span="1" style="width: 5%;">
+       <col span="1" style="width: 15%;">
+        </colgroup>
+        <tbody>
+
+        <tr>
+            <td scope="row" class='align-middle text-center'><br>
+              <span class="badge badge-secondary"></span></td>
+            <td class='align-middle text-center'>Bert-base HSLN (Baseline model)<br/>
+              <span class="affiliation">Thoughtworks, Ekstep</span><br/></td>
+<!--            <td class='align-middle text-center'><div class="crossed"><i class="far fa-file text-danger"></i></div></td>-->
+          <td class='align-middle text-center'><a href="https://github.com/Legal-NLP-EkStep"><i class="far fa-file-alt"></i></a></td>
+            <td class='align-middle text-center'><strong>77.7</strong></td>
+          </tr>
+
+        <tr>
+            <td scope="row" class='align-middle text-center'>1<br>
+              <span class="badge badge-secondary">Nov 22, 2021</span></td>
+            <td class='align-middle text-center'>DUMMY<br/>
+              <span class="affiliation">DUMMY</span><br/></td>
+            <td class='align-middle text-center'><div class="crossed"><i class="far fa-file text-danger"></i></div></td>
+            <td class='align-middle text-center'>NA</td>
+          </tr><tr>
+
+          </tr></tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+    <hr>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p class="copyright text-muted">Copyright &copy; Ekstep 2021</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+    
+
+  </body>
+
+</html>
