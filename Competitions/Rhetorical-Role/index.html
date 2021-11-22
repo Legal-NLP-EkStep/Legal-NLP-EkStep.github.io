@@ -11,7 +11,7 @@
     <meta name="twitter:site" content="@amant555">
     <meta name="twitter:creator" content="@amant555">
     <meta name="twitter:title" content="RhetoricalRole: A dataset to structure indian legal judgements">
-    <meta name="twitter:description" content="RhetoricalRole dataset is a dataset with each sentence in a judgement marked with a specific rhetorical role for structuring the judgement.">
+    <meta name="twitter:description" content="Predict the stucture of Indian Court Judgements using sentence rhetorical roles.">
 
     <title>RhetoricalRole Homepage</title>
 
@@ -34,7 +34,7 @@
   "@context":"https://schema.org/",
   "@type":"Dataset",
   "name":"RhetoricalRole: A dataset to structure indian legal judgements",
-  "description":"RhetoricalRole dataset is a dataset with each sentence in a judgement marked with a specific rhetorical role for structuring the judgement.",
+  "description":"Predict the stucture of Indian Court Judgements using sentence rhetorical roles.",
   "url":"https://Legal-NLP-EkStep.github.io/",
   "keywords":[
      "Rhetorical Role Prediction on Indian legal judgements",
@@ -71,7 +71,7 @@
   <body>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href="index.html">RhetoricalRole</a>
+    <a class="navbar-brand" href="index.html">OpenNyAI</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fa fa-bars"></i>
@@ -87,8 +87,8 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
-          <h1>RhetoricalRole</h1>
-          <span class="subheading">A dataset for structuring Indian legal judgements<span class="line">Rhetorical roles</span></span>
+          <h1>CoRRP</h1>
+          <span class="subheading">Indian Court judgements Rhetorical Roles Prediction<span class="line"></span></span>
         </div>
       </div>
     </div>
@@ -101,15 +101,15 @@
   <div class="row">
     <div class="col-lg-4">
       <div class="list-group">
-        <div class="list-group-item"><h4>What is [Benchmark]?</h4>
-        <p>Description of benchmark</p>
-        <p>For more details about Structuring Indian legal judgements, please refer to our NA paper:</p>
+        <div class="list-group-item"><h4>What is CoRRP?</h4>
+        <p>CoRRP is a sequential sentence classification dataset which provides structure to Indian Court judgements using sentence rhetorical roles. This is created as part of OpenNyAI mission by EkStep Foundation, Thoughtworks , Aagami , National Law School’s law and technology society (Bangalore) and Rohini Nilekani Philanthropies.</p>
+        <p>For more details about CoRRP, please refer to our NA paper:</p>
         <p class="text-center">
           <a href="NA"><button type="button" class="btn btn-info">NA</button></a>
         </p>
         </div>
         <div class="list-group-item"><h4>Getting started</h4>
-        <p>HotpotQA is distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>. The training and development sets can be downloaded below.</p>
+        <p>CoRRP is distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>. The training and development sets can be downloaded below.</p>
         <p class="text-center">
           <a href="http://googlestorageapi/train.json"><button type="button" class="btn btn-success">Training set </button></a>
         </p>
@@ -121,7 +121,7 @@
           <a href="https://github.com/[TO-BE-ADDED]"><button type="button" class="btn btn-secondary">Getting started guide</button></a>
         </p>
         <p>
-        Once you have built your model, you can use the evaluation script we provide below to evaluate model performance by running <code>python hotpot_evaluate_v1.py &lt;path_to_prediction&gt; &lt;path_to_gold&gt;</code>
+        Once you have built your model, you can use the evaluation script we provide below to evaluate model performance by running <code>python corrp_evaluate_v1.py &lt;path_to_prediction&gt; &lt;path_to_gold&gt;</code>
         </p>
         <p class="text-center">
           <a href="https://raw.githubusercontent.com/[TO-BE-ADDED]"><button type="button" class="btn btn-secondary">Evaluation script (4.2KB)</button></a>
@@ -130,12 +130,7 @@
         <p class="text-center">
           <a href="https://worksheets.codalab.org/worksheets/[TO-BE-ADDED]"><button type="button" class="btn btn-info">Submission Guide</button></a>
         </p>
-        <p>
-        We also release the processed Wikipedia used in the process of creating HotpotQA (also under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>), serving both as the corpus for the <em>fullwiki</em> setting in our evaluation, and hopefully as a standalone resource for future researches involving processed text on Wikipedia. Below please find the link to the documentation for this corpus.
-        </p>
-        <p class="text-center">
-          <a href="wiki-readme.html"><button type="button" class="btn btn-info">Processed Wikipedia README</button></a>
-        </p>
+
         </div>
         <div class="list-group-item"><h4>Stay connected!</h4>
         <p>Join our <a href="https://NA">Google group</a> to receive updates or initiate discussions about RhetoricalRole!</p>
@@ -156,7 +151,6 @@
       Leaderboard
     </div>
     <div class="card-body">
-      Rhetorical role benchmark
       <table class="table table-responsive">
         <thead class="thead-light">
           <tr>
@@ -207,7 +201,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <p class="copyright text-muted">Copyright &copy; Ekstep 2021</p>
+            <p class="copyright text-muted">Copyright &copy; OpenNyAI team</p>
           </div>
         </div>
       </div>
