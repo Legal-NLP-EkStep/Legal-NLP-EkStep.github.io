@@ -147,7 +147,7 @@
                 "affiliation":"Dummy AFFILIATION",
                 "paper_name":"Dummy PAPER NAME",
                 "paper_link":"https://arxiv.org/pdf/2107.06056.pdf",
-                "code_link":"https://github.com/Legal-NLP-EkStep/rhetorical-role-baseline"
+                "code_link":"https://github.com/Legal-NLP-EkStep/rhetorical-role-baseline",
                 "num_period_submissions": 0,
                 "num_total_submissions": 2,
                 "public": true,
