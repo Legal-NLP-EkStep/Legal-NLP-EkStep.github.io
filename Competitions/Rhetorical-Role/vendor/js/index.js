@@ -77,8 +77,8 @@ const attachLeaderboard = (leaderboard, rank, host) => {
   const tr = document.createElement('tr');
 
   const td1 = createRankTd(rank, toDate(leaderboard.bundle.metadata.last_updated * 1000));
-  const td2 = createModelTd(leaderboard.submission.user_name, leaderboard.submission.description);
-  const td3 = createCodeTd(leaderboard.submission.public, codeUrl(host, leaderboard.bundle.id));
+  const td2 = createModelTd(leaderboard.submission.model_name, leaderboard.submission.affiliation);
+  const td3 = createCodeTd(leaderboard.submission.public, leaderboard.submission.code_link);
   const td4 = createWeightedF1Td(Math.round(leaderboard.scores.f1*10)/10);
 
   tr.appendChild(td1);
