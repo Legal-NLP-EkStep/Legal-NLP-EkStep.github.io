@@ -142,11 +142,16 @@
             },
             "submission": {
                 "created": 1622859814,
-                "description": "IE-Net (ensemble) (RICOH_SRCB_DML)",
+                "model_name":"Dummy MODEL NAME",
+                "model_type":"ENSEMBLE",
+                "affiliation":"Dummy AFFILIATION",
+                "paper_name":"Dummy PAPER NAME",
+                "paper_link":"https://arxiv.org/pdf/2107.06056.pdf",
+                "code_link":"https://github.com/Legal-NLP-EkStep/rhetorical-role-baseline"
                 "num_period_submissions": 0,
                 "num_total_submissions": 2,
                 "public": true,
-                "user_name": "SRCB_DML_SQUAD"
+                "user_name": "Dummy"
             }
         }
     ],
