@@ -1,159 +1,153 @@
 {
     "config": {
-        "allow_multiple_models": true,
+        "allow_multiple_models": false,
         "allow_orphans": true,
         "count_failed_submissions": true,
         "evaluate": {
-            "command": "python evaluate-v2.0.py data.json predictions.json -o eval.json",
+            "command": "python evaluation.py TEST_GROUND_TRUTH.json predictions.json",
             "dependencies": [
                 {
-                    "child_path": "evaluate-v2.0.py",
+                    "child_path": "evaluation.py",
                     "parent_path": "",
-                    "parent_uuid": "0x6b567e1cf2e041ec80d7098f031c5c9e"
+                    "parent_uuid": "0xf7706a5a735344eebb5d7c268befcf26"
                 },
                 {
-                    "child_path": "data.json",
+                    "child_path": "TEST_GROUND_TRUTH.json",
                     "parent_path": "",
-                    "parent_uuid": "0xe738d3daf6cd48668e6c4a210577b209"
+                    "parent_uuid": "0x05f973d5ca674b2bb640e0a042fbb84a"
                 },
                 {
                     "child_path": "predictions.json",
-                    "parent_path": "",
+                    "parent_path": "predictions.json",
                     "parent_uuid": "{predict}"
                 }
             ],
-            "metadata": {
-                "request_docker_image": "codalab/ubuntu:1.9"
-            },
-            "tag": "nurdauqs-test-eval-shuf"
+            "metadata": {},
+            "tag": "competition-evaluate"
         },
         "host": "https://worksheets.codalab.org",
-        "log_worksheet_uuid": "0x816632b5306d41d3ba80ccecc84f1b6e",
+        "log_worksheet_uuid": "0x6f589f1fc9fd4e3d8518824be34a7fc5",
         "make_predictions_public": false,
         "max_leaderboard_size": 10000,
         "max_submissions_per_period": 5,
-        "max_submissions_total": 20,
-        "metadata": {
-            "name": "SQuAD v2.0 Competition Leaderboard"
-        },
+        "max_submissions_total": 10000,
+        "metadata": {},
         "predict": {
             "depth": 10,
-            "metadata": {
-                "request_network": false,
-                "request_queue": ""
-            },
+            "metadata": {},
             "mimic": [
                 {
-                    "new": "0x913132d5089d4c6dbe45a0cb88b0ecee",
-                    "old": "0xb30d937a18574073903bb38b382aab03"
+                    "new": "0xaff14aa909694014bf73ba74d27db1cf",
+                    "old": "0x0241d338ac2343fb92e86f6f41d80e01"
                 }
             ],
-            "tag": "nurdauqs-test-predict-shuf"
+            "tag": "competition-predict"
         },
         "quota_period_seconds": 86400,
         "refresh_period_seconds": 60,
         "score_specs": [
             {
-                "key": "/eval.json:f1",
-                "name": "f1"
-            },
-            {
-                "key": "/eval.json:exact",
-                "name": "exact_match"
+                "key": "/result.json:Weighted-F1",
+                "name": "Weighted-F1"
             }
         ],
-        "submission_tag": "squad-2.0-test-submit"
+        "submission_tag": "ILJ_rhetorical_role_predictions"
     },
     "leaderboard": [
         {
             "bundle": {
-                "args": "run evaluate-v2.0.py:0x6b567e1cf2e041ec80d7098f031c5c9e data.json:0xe738d3daf6cd48668e6c4a210577b209 predictions.json:0x33a6800d4c4f456486c434f56c10af01 \"python evaluate-v2.0.py data.json predictions.json -o eval.json\" --request-cpus 1 --request-docker-image codalab/ubuntu:1.9 --request-memory 2g",
+                "args": "run evaluation.py:0xf7706a5a735344eebb5d7c268befcf26 TEST_GROUND_TRUTH.json:0x05f973d5ca674b2bb640e0a042fbb84a predictions.json:0x28857faae4b34755825f5c701072dfcf/predictions.json \"python evaluation.py TEST_GROUND_TRUTH.json predictions.json\" --request-cpus 1 --request-memory 2g --request-network",
                 "bundle_type": "run",
-                "command": "python evaluate-v2.0.py data.json predictions.json -o eval.json",
-                "data_hash": "0x3f58ed03d1da299f4d65d95e771f5293c71f1ad2",
+                "command": "python evaluation.py TEST_GROUND_TRUTH.json predictions.json",
+                "data_hash": "0x9335dede5994d46c41041a9c4e458508693e1b7f",
                 "dependencies": [
                     {
-                        "child_path": "evaluate-v2.0.py",
-                        "child_uuid": "0xe46209f4ddc241798c220981c6acf850",
-                        "parent_name": "evaluate-v2.0.py",
+                        "child_path": "evaluation.py",
+                        "child_uuid": "0xa84c0c03818c4255b4dfaf2950d35783",
+                        "parent_name": "evaluation.py",
                         "parent_path": "",
-                        "parent_uuid": "0x6b567e1cf2e041ec80d7098f031c5c9e"
+                        "parent_uuid": "0xf7706a5a735344eebb5d7c268befcf26"
                     },
                     {
-                        "child_path": "data.json",
-                        "child_uuid": "0xe46209f4ddc241798c220981c6acf850",
-                        "parent_name": "test-v2.0.json",
+                        "child_path": "TEST_GROUND_TRUTH.json",
+                        "child_uuid": "0xa84c0c03818c4255b4dfaf2950d35783",
+                        "parent_name": "TEST_GROUND_TRUTH_v2.json",
                         "parent_path": "",
-                        "parent_uuid": "0xe738d3daf6cd48668e6c4a210577b209"
+                        "parent_uuid": "0x05f973d5ca674b2bb640e0a042fbb84a"
                     },
                     {
                         "child_path": "predictions.json",
-                        "child_uuid": "0xe46209f4ddc241798c220981c6acf850",
-                        "parent_name": "SRCB_DML_SQUAD-predictions-IE-Net-predict",
-                        "parent_path": "",
-                        "parent_uuid": "0x33a6800d4c4f456486c434f56c10af01"
+                        "child_uuid": "0xa84c0c03818c4255b4dfaf2950d35783",
+                        "parent_name": "astha.agarwal-run-predict-predict",
+                        "parent_path": "predictions.json",
+                        "parent_uuid": "0x28857faae4b34755825f5c701072dfcf"
                     }
                 ],
                 "frozen": null,
-                "id": "0xe46209f4ddc241798c220981c6acf850",
+                "id": "0xa84c0c03818c4255b4dfaf2950d35783",
                 "is_anonymous": false,
                 "metadata": {
                     "actions": [],
                     "allow_failed_dependencies": false,
-                    "created": 1622912612,
-                    "data_size": 4337,
-                    "description": "{\"submit_id\": \"0x8bf592beb7804a49bdca7eecc3fa82ef\", \"submitter_id\": \"0x8618c01062434d7e9d18e2938f6d1386\", \"predict_id\": \"0x33a6800d4c4f456486c434f56c10af01\"}",
-                    "docker_image": "codalab/ubuntu@sha256:a8369aaa7afdb4d242104d85aa660c034a7bf89e438963bf73ba197fe3731be0",
+                    "cpu_usage": 0.0,
+                    "created": 1638422466,
+                    "data_size": 4131,
+                    "description": "{\"submit_id\": \"0x9958d0ba01a74ce38ff7c9db35d0209c\", \"submitter_id\": \"0xe0d3c3d97c0d49b4b9e7c01aabdedaeb\", \"predict_id\": \"0x28857faae4b34755825f5c701072dfcf\"}",
+                    "docker_image": "codalab/default-cpu@sha256:1a2278ec4169054384c948a4c3b8a2ebf44b82f8e473429dfb4baf5f81ee32be",
                     "exclude_patterns": [],
                     "exitcode": 0,
-                    "last_updated": 1622961905,
-                    "name": "SRCB_DML_SQUAD-predictions-IE-Net-results",
-                    "remote": "767b3995db77-f551c00ac93440da8bd8e28894f21bf2",
+                    "last_updated": 1638422566,
+                    "memory_usage": 0.0,
+                    "name": "astha.agarwal-run-predict-results",
+                    "remote": "b5e75b6c1b98-3e5c3dda698743d7a11188bec7a70b22",
                     "request_cpus": 1,
                     "request_disk": "",
-                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_docker_image": "",
                     "request_gpus": 0,
                     "request_memory": "2g",
-                    "request_network": false,
+                    "request_network": true,
                     "request_priority": 0,
                     "request_queue": "",
                     "request_time": "",
                     "run_status": "Finished",
-                    "started": 1622961856,
+                    "started": 1638422517,
                     "tags": [
-                        "nurdauqs-test-eval-shuf"
+                        "competition-evaluate"
                     ],
-                    "time": 1.49308,
+                    "time": 0.716919,
+                    "time_cleaning_up": 8.168662548065186,
+                    "time_preparing": 13.751546859741211,
+                    "time_running": 10.136685371398926,
                     "time_system": 0.0,
+                    "time_uploading_results": 16.290928602218628,
                     "time_user": 0.0
                 },
                 "owner": {
-                    "id": "20891",
+                    "id": "0xe493b1d3ae49408eaed3f9245510f0a7",
                     "type": "users"
                 },
                 "permission": 2,
                 "permission_spec": "all",
                 "state": "ready",
-                "uuid": "0xe46209f4ddc241798c220981c6acf850"
+                "uuid": "0xa84c0c03818c4255b4dfaf2950d35783"
             },
             "scores": {
-                "exact_match": 90.9388399909727,
-                "f1": 93.21444255956477
+                "Weighted-F1": 0.2635882635882636
             },
             "submission": {
-                "created": 1622859814,
-                "model_name":"Dummy MODEL NAME",
-                "model_type":"ENSEMBLE",
-                "affiliation":"Dummy AFFILIATION",
-                "paper_name":"Dummy PAPER NAME",
-                "paper_link":"https://arxiv.org/pdf/2107.06056.pdf",
-                "code_link":"https://github.com/Legal-NLP-EkStep/rhetorical-role-baseline",
-                "num_period_submissions": 0,
-                "num_total_submissions": 2,
-                "public": true,
-                "user_name": "Dummy"
+                "created": 1638421905,
+                "num_period_submissions": 1,
+                "num_total_submissions": 1,
+                "public": false,
+                "user_name": "astha.agarwal",
+                "model_name": "All sentences as ANALYSIS",
+                "model_type": "SINGLE MODEL ",
+                "affiliation": "Anonymous",
+                "paper_name": "NONE",
+                "paper_link": "NONE",
+                "code_link": "NONE"
             }
         }
     ],
-    "updated": 1633368592.9927692
+    "updated": 1638423345.475175
 }
