@@ -24,7 +24,6 @@ class LeaderboardUtils:
             'Error: Competition config yml not found')
         self.master_leaderboard_json_path = os.path.abspath(secrets['master_leaderboard_json_path'])
         self.final_leaderboard_json_path = os.path.abspath(secrets['final_leaderboard_json_path'])
-        os.makedirs(self.master_leaderboard_json_path, exist_ok=True)
         self.bucket_path = secrets['bucket_path']
         self.push_to_bucket = secrets['push_to_gcp_bucket']
         self.push_to_git = secrets['push_to_git']
