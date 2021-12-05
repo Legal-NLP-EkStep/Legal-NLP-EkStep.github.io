@@ -53,6 +53,8 @@ class LeaderboardUtils:
             assert 'gs://' in self.bucket_path, "Wrong bucket path"
             command = f'gsutil -m cp -r {self.master_leaderboard_json_path} {self.bucket_path}'
             _, _ = self.execute_terminal_command_and_return_stdout_stderr(command)
+            command = f'gsutil -m cp -r {self.final_leaderboard_json_path} {self.bucket_path}'
+            _, _ = self.execute_terminal_command_and_return_stdout_stderr(command)
             print("***************Pushed to bucket successfully***************")
 
     def push_final_leaderboard_json_to_git(self):
