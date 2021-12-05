@@ -72,15 +72,11 @@ class LeaderboardUtils:
         command = f'cl-competitiond {self.competition_yml_path} {self.master_leaderboard_json_path}'
         output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
         self.load_master_leaderboard_and_save_it()
-        self.upload_master_leaderboard_file_to_bucket()
-        self.push_final_leaderboard_json_to_git()
 
     def update_leaderboard_only(self):
         command = f'cl-competitiond -l {self.competition_yml_path} {self.master_leaderboard_json_path}'
         output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
         self.load_master_leaderboard_and_save_it()
-        self.upload_master_leaderboard_file_to_bucket()
-        self.push_final_leaderboard_json_to_git()
 
     def clean_up_of_completed_job_resources(self):
         if not os.path.exists(self.master_leaderboard_json_path):
@@ -119,3 +115,5 @@ if __name__ == "__main__":
             break
         sleep(300)
     obj.update_leaderboard_only()
+    obj.upload_master_leaderboard_file_to_bucket()
+    obj.push_final_leaderboard_json_to_git()
