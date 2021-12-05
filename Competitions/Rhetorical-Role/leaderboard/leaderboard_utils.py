@@ -32,8 +32,6 @@ class LeaderboardUtils:
         self.bucket_path = secrets['bucket_path']
         self.push_to_bucket = secrets['push_to_gcp_bucket']
         self.push_to_git = secrets['push_to_git']
-        self.gitusername = secrets['gitusername']
-        self.gittoken = secrets['gittoken']
 
     def load_master_leaderboard_and_save_it(self):
         leaderboard = json.load(open(self.master_leaderboard_json_path))
@@ -55,6 +53,7 @@ class LeaderboardUtils:
             assert 'gs://' in self.bucket_path, "Wrong bucket path"
             command = f'gsutil -m cp -r {self.master_leaderboard_json_path} {self.bucket_path}'
             _, _ = self.execute_terminal_command_and_return_stdout_stderr(command)
+            print("***************Pushed to bucket successfully***************")
 
     def push_final_leaderboard_json_to_git(self):
         if self.push_to_git:
@@ -62,9 +61,11 @@ class LeaderboardUtils:
             dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
             command = 'git pull --rebase'
             output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
+            command = f'git add {self.final_leaderboard_json_path.split("/")[-1]}'
+            output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
             command = f'git commit -m "Update: {dt_string}"'
             output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
-            command = f'{self.gitusername} | {self.gittoken} | git push'
+            command = f'git push'
             output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
 
     def schedule_evaluation_jobs_and_update_leaderboard(self):
