@@ -107,7 +107,7 @@ class LeaderboardUtils:
 
 
 if __name__ == "__main__":
-    obj = LeaderboardUtils("./secrets.json")
+    obj = LeaderboardUtils(os.path.join(os.path.split(os.path.abspath(__file__))[0],"secrets.json"))
     obj.schedule_evaluation_jobs_and_update_leaderboard()
     for i in range(150):  # here 150 would mean that this loop will execute every 5 minutes for next 12 hrs and stop if all jobs are completed
         obj.clean_up_of_completed_job_resources()
