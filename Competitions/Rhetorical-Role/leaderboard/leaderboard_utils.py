@@ -70,24 +70,16 @@ class LeaderboardUtils:
     def schedule_evaluation_jobs_and_update_leaderboard(self):
         command = f'cl-competitiond {self.competition_yml_path} {self.master_leaderboard_json_path}'
         output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
-        if error:
-            print(error)
-            sys.exit("Error: Command not executed properly check above to debug")
-        else:
-            self.load_master_leaderboard_and_save_it()
-            self.upload_master_leaderboard_file_to_bucket()
-            self.push_final_leaderboard_json_to_git()
+        self.load_master_leaderboard_and_save_it()
+        self.upload_master_leaderboard_file_to_bucket()
+        self.push_final_leaderboard_json_to_git()
 
     def update_leaderboard_only(self):
         command = f'cl-competitiond -l {self.competition_yml_path} {self.master_leaderboard_json_path}'
         output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
-        if error:
-            print(error)
-            sys.exit("Error: Command not executed properly check above to debug")
-        else:
-            self.load_master_leaderboard_and_save_it()
-            self.upload_master_leaderboard_file_to_bucket()
-            self.push_final_leaderboard_json_to_git()
+        self.load_master_leaderboard_and_save_it()
+        self.upload_master_leaderboard_file_to_bucket()
+        self.push_final_leaderboard_json_to_git()
 
     def clean_up_of_completed_job_resources(self):
         if not os.path.exists(self.master_leaderboard_json_path):
