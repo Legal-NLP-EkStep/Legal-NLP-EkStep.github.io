@@ -24,6 +24,10 @@ class LeaderboardUtils:
             'Error: Competition config yml not found')
         self.master_leaderboard_json_path = os.path.abspath(secrets['master_leaderboard_json_path'])
         self.final_leaderboard_json_path = os.path.abspath(secrets['final_leaderboard_json_path'])
+        self.codalab_user_name = secrets['codalab_user_name']
+        self.codalab_user_password = secrets['codalab_user_password']
+        os.environ['CODALAB_USERNAME'] = self.codalab_user_name
+        os.environ['CODALAB_PASSWORD'] = self.codalab_user_password
         self.bucket_path = secrets['bucket_path']
         self.push_to_bucket = secrets['push_to_gcp_bucket']
         self.push_to_git = secrets['push_to_git']
@@ -115,7 +119,8 @@ class LeaderboardUtils:
 if __name__ == "__main__":
     obj = LeaderboardUtils("./secrets.json")
     obj.schedule_evaluation_jobs_and_update_leaderboard()
-    for i in range(150): # here 150 would mean that this loop will execute every 5 minutes for next 12 hrs and stop if all jobs are completed
+    for i in range(
+            150):  # here 150 would mean that this loop will execute every 5 minutes for next 12 hrs and stop if all jobs are completed
         sleep(300)
         obj.clean_up_of_completed_job_resources()
         if obj.pending_jobs_count == 0:
