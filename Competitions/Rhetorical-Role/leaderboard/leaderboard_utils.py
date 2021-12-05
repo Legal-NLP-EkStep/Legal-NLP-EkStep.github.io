@@ -25,8 +25,6 @@ class LeaderboardUtils:
         self.master_leaderboard_json_path = os.path.abspath(secrets['master_leaderboard_json_path'])
         self.final_leaderboard_json_path = os.path.abspath(secrets['final_leaderboard_json_path'])
         os.makedirs(self.master_leaderboard_json_path, exist_ok=True)
-        self.codalab_user_name = secrets['codalab_user_name']
-        self.codalab_user_password = secrets['codalab_user_password']
         self.bucket_path = secrets['bucket_path']
         self.push_to_bucket = secrets['push_to_gcp_bucket']
         self.push_to_git = secrets['push_to_git']
@@ -66,7 +64,7 @@ class LeaderboardUtils:
             _, _ = self.execute_terminal_command_and_return_stdout_stderr(command)
 
     def schedule_evaluation_jobs_and_update_leaderboard(self):
-        command = f'{self.codalab_user_name} | {self.codalab_user_password} | cl-competitiond {self.competition_yml_path} {self.master_leaderboard_json_path}'
+        command = f'cl-competitiond {self.competition_yml_path} {self.master_leaderboard_json_path}'
         output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
         if error:
             print(error)
@@ -77,7 +75,7 @@ class LeaderboardUtils:
             self.push_final_leaderboard_json_to_git()
 
     def update_leaderboard_only(self):
-        command = f'{self.codalab_user_name} | {self.codalab_user_password} | cl-competitiond -l {self.competition_yml_path} {self.master_leaderboard_json_path}'
+        command = f'cl-competitiond -l {self.competition_yml_path} {self.master_leaderboard_json_path}'
         output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
         if error:
             print(error)
@@ -96,7 +94,7 @@ class LeaderboardUtils:
             entries = leaderboard['leaderboard']
             for each_entry in entries:
                 final_id_with_result = each_entry['bundle']['id']
-                command = f'{self.codalab_user_name} | {self.codalab_user_password} | cl info {final_id_with_result}'
+                command = f'cl info {final_id_with_result}'
                 output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
                 parsed_output_with_status = [i for i in output.split('\n') if 'run_status' in i]
                 status = True if parsed_output_with_status[0].split(":")[-1].strip() == 'Finished' else False
