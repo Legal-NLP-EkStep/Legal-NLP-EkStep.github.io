@@ -14,6 +14,7 @@ class LeaderboardUtils:
     def execute_terminal_command_and_return_stdout_stderr(command):
         stdout, stderr = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE,
                                           stderr=subprocess.PIPE).communicate()
+        print(stdout.decode('utf-8'),'\n\n', stderr.decode('utf-8'))
         return stdout.decode('utf-8'), stderr.decode('utf-8')
 
     def check_and_load_secrets(self, secrets_json_path):
@@ -60,11 +61,11 @@ class LeaderboardUtils:
             now = datetime.now()
             dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
             command = 'git pull --rebase'
-            _, _ = self.execute_terminal_command_and_return_stdout_stderr(command)
+            output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
             command = f'git commit -m "Update: {dt_string}"'
-            _, _ = self.execute_terminal_command_and_return_stdout_stderr(command)
+            output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
             command = f'{self.gitusername} | {self.gittoken} | git push'
-            _, _ = self.execute_terminal_command_and_return_stdout_stderr(command)
+            output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
 
     def schedule_evaluation_jobs_and_update_leaderboard(self):
         command = f'cl-competitiond {self.competition_yml_path} {self.master_leaderboard_json_path}'
