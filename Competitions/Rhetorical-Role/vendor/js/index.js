@@ -90,7 +90,7 @@ const attachLeaderboard = (leaderboard, rank, host) => {
 }
 
 const fetchData = async() => {
-  const response = await fetch('https://raw.githubusercontent.com/Legal-NLP-EkStep/Legal-NLP-EkStep.github.io/main/out.json');
+  const response = await fetch('https://raw.githubusercontent.com/Legal-NLP-EkStep/Legal-NLP-EkStep.github.io/main/Competitions/Rhetorical-Role/leaderboard/out.json');
   const responseAsJson = (await response.json());
   const leaderboardScores = responseAsJson.leaderboard;
   const host = responseAsJson.config.host
