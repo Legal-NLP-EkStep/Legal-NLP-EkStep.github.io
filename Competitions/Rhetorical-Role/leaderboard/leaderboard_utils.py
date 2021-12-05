@@ -67,7 +67,7 @@ class LeaderboardUtils:
         if self.push_to_git:
             now = datetime.now()
             dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-            command = f'git add {self.final_leaderboard_json_path.split("/")[-1]}'
+            command = f'git add {self.final_leaderboard_json_path}'
             output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
             command = f'git commit -m "Update: {dt_string}"'
             output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
