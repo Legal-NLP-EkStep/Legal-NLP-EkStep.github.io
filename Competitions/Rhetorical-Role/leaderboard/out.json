@@ -136,18 +136,19 @@
             },
             "submission": {
                 "created": 1638421905,
-                "num_period_submissions": 1,
+                "description": "{\"model_name\":\"Model_1\",\"model_type\":\"SINGLE MODEL \", \"affiliation\":\"NONE\", \"paper_name\":\"NONE\", \"paper_link\":\"NONE\", \"code_link\":\"NONE\"}",
+                "num_period_submissions": 0,
                 "num_total_submissions": 1,
-                "public": false,
+                "public": true,
                 "user_name": "astha.agarwal",
-                "model_name": "All sentences as ANALYSIS",
+                "model_name": "Model_1",
                 "model_type": "SINGLE MODEL ",
                 "affiliation": "Anonymous",
-                "paper_name": "NONE",
-                "paper_link": "NONE",
-                "code_link": "NONE"
+                "paper_name": "Anonymous",
+                "paper_link": "Anonymous",
+                "code_link": "Anonymous"
             }
         }
     ],
-    "updated": 1638423345.475175
+    "updated": 1638717016.092056
 }
