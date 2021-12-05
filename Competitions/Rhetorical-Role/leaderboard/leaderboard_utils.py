@@ -40,6 +40,8 @@ class LeaderboardUtils:
         for each_entry in leaderboard['leaderboard']:
             description = json.loads(each_entry['submission']['description'])
             for key in description.keys():
+                if description[key].upper() == 'NONE':
+                    description[key] = 'Anonymous'
                 each_entry['submission']['description'][key] = description[key]
         leaderboard['leaderboard'] = sorted(leaderboard['leaderboard'], key=lambda x: x['scores']['Weighted-F1'],
                                             reverse=True)
