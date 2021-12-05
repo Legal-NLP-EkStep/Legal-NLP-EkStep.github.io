@@ -44,7 +44,7 @@ class LeaderboardUtils:
             for key in description.keys():
                 if description[key].upper() == 'NONE':
                     description[key] = 'Anonymous'
-                each_entry['submission']['description'][key] = description[key]
+                each_entry['submission'][key] = description[key]
         leaderboard['leaderboard'] = sorted(leaderboard['leaderboard'], key=lambda x: x['scores']['Weighted-F1'],
                                             reverse=True)
         with open(self.final_leaderboard_json_path, 'w') as f:
