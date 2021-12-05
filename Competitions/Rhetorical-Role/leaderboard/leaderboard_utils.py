@@ -63,8 +63,6 @@ class LeaderboardUtils:
             output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
             command = f'git commit -m "Update: {dt_string}"'
             output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
-            command = 'git pull'
-            output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
             command = f'git push'
             output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
 
