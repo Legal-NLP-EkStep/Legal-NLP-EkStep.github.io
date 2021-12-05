@@ -116,4 +116,10 @@ if __name__ == "__main__":
         sleep(300)
     obj.update_leaderboard_only()
     obj.upload_master_leaderboard_file_to_bucket()
+    # For Git commits: Complete these steps.
+    # 1. Run: git config --global credential.helper store #This will store your credentials in git when you enter next time
+    # 2. Run: git push #So that your credentials get stored
+    # 3. Run: git config --global user.email "you@example.com"
+    # 4. Run: git config --global user.name "Your Name"
+    # Only after these steps you will see updates in git
     obj.push_final_leaderboard_json_to_git()
