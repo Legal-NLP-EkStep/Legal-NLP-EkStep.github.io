@@ -103,7 +103,10 @@ class LeaderboardUtils:
                 command = f'{self.cl_path} info {final_id_with_result}'
                 output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
                 parsed_output_with_status = [i for i in output.split('\n') if 'run_status' in i]
-                status = True if parsed_output_with_status[0].split(":")[-1].strip() == 'Finished' else False
+                if parsed_output_with_status:
+                    status = True if parsed_output_with_status[0].split(":")[-1].strip() == 'Finished' else False
+                else:
+                    status = False
                 entry_with_parent_id = [val for val in each_entry['bundle']['dependencies'] if
                                         val['child_path'] == 'predictions.json']
                 if entry_with_parent_id:
