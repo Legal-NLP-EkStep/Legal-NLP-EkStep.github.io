@@ -102,7 +102,7 @@ class LeaderboardUtils:
                 if entry_with_parent_id:
                     parent_id = entry_with_parent_id[0]['parent_uuid']
                     if status:
-                        command = f'cl rm -d {parent_id} --force'
+                        command = f'{self.cl_path} rm -d {parent_id} --force'
                         output, error = self.execute_terminal_command_and_return_stdout_stderr(command)
                     else:
                         self.pending_jobs_count += 1
