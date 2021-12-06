@@ -14,7 +14,7 @@ class LeaderboardUtils:
     def execute_terminal_command_and_return_stdout_stderr(command):
         stdout, stderr = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE,
                                           stderr=subprocess.PIPE).communicate()
-        print(stdout.decode('utf-8'),'\n\n', stderr.decode('utf-8'))
+        print(stdout.decode('utf-8'), '\n\n', stderr.decode('utf-8'))
         return stdout.decode('utf-8'), stderr.decode('utf-8')
 
     def check_and_load_secrets(self, secrets_json_path):
@@ -34,7 +34,7 @@ class LeaderboardUtils:
         self.push_to_git = secrets['push_to_git']
         self.codalab_cli_path = secrets['codalab_cli_path']
         if self.codalab_cli_path:
-            self.competitiond_path = os.path.join(self.codalab_cli_path,'cl-competitiond')
+            self.competitiond_path = os.path.join(self.codalab_cli_path, 'cl-competitiond')
             self.cl_path = os.path.join(self.codalab_cli_path, 'cl')
         else:
             sys.exit('Error: Please provide codalab cli path in config, Use which command to find it')
@@ -44,11 +44,18 @@ class LeaderboardUtils:
         leaderboard['leaderboard'] = [i for i in leaderboard['leaderboard'] if
                                       type(i['scores']['Weighted-F1']) == float]
         for each_entry in leaderboard['leaderboard']:
-            description = json.loads(each_entry['submission']['description'])
-            for key in description.keys():
-                if description[key].upper() == 'NONE':
-                    description[key] = 'Anonymous'
-                each_entry['submission'][key] = description[key]
+            try:
+                description = json.loads(each_entry['submission']['description'])
+                for key in description.keys():
+                    if description[key].upper() == 'NONE':
+                        description[key] = 'Anonymous'
+                    if key == 'code_link':
+                        each_entry['submission']['public'] = False
+                    each_entry['submission'][key] = description[key]
+            except:
+                pass
+        leaderboard['leaderboard'] = [entry for entry in leaderboard['leaderboard'] if
+                                      entry.get('code_link') is not None]
         leaderboard['leaderboard'] = sorted(leaderboard['leaderboard'], key=lambda x: x['scores']['Weighted-F1'],
                                             reverse=True)
         with open(self.final_leaderboard_json_path, 'w') as f:
@@ -113,9 +120,10 @@ class LeaderboardUtils:
 
 
 if __name__ == "__main__":
-    obj = LeaderboardUtils(os.path.join(os.path.split(os.path.abspath(__file__))[0],"secrets.json"))
+    obj = LeaderboardUtils(os.path.join(os.path.split(os.path.abspath(__file__))[0], "secrets.json"))
     obj.schedule_evaluation_jobs_and_update_leaderboard()
-    for i in range(150):  # here 150 would mean that this loop will execute every 5 minutes for next 12 hrs and stop if all jobs are completed
+    for i in range(
+            150):  # here 150 would mean that this loop will execute every 5 minutes for next 12 hrs and stop if all jobs are completed
         obj.clean_up_of_completed_job_resources()
         if obj.pending_jobs_count == 0:
             break
