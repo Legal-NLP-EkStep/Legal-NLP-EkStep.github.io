@@ -49,13 +49,13 @@ class LeaderboardUtils:
                 for key in description.keys():
                     if description[key].upper() == 'NONE':
                         description[key] = 'Anonymous'
-                    if key == 'code_link':
+                    if key == 'code_link' and description[key] == 'Anonymous':
                         each_entry['submission']['public'] = False
                     each_entry['submission'][key] = description[key]
             except:
                 pass
         leaderboard['leaderboard'] = [entry for entry in leaderboard['leaderboard'] if
-                                      entry.get('code_link') is not None]
+                                      entry['submission'].get('code_link') is not None]
         leaderboard['leaderboard'] = sorted(leaderboard['leaderboard'], key=lambda x: x['scores']['Weighted-F1'],
                                             reverse=True)
         with open(self.final_leaderboard_json_path, 'w') as f:
