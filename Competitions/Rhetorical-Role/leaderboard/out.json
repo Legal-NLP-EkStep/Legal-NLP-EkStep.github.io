@@ -138,7 +138,7 @@
             "submission": {
                 "created": 1644228204,
                 "description": "{\"model_name\":\"ROBERTA-base HSLN\", \"model_type\":\"SINGLE MODEL\", \"affiliation\":\"NONE\", \"paper_name\":\"NONE\", \"paper_link\":\"NONE\", \"code_link\":\"NONE\"}",
-                "num_period_submissions": 1,
+                "num_period_submissions": 0,
                 "num_total_submissions": 1,
                 "public": false,
                 "user_name": "urvi_a",
@@ -151,5 +151,5 @@
             }
         }
     ],
-    "updated": 1644574398.4745226
+    "updated": 1644694791.484358
 }
