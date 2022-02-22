@@ -56,49 +56,49 @@
     "leaderboard": [
         {
             "bundle": {
-                "args": "run evaluation.py:0xde801b6bdaac4251a1715fd8208e445b TEST_GROUND_TRUTH.json:0x05f973d5ca674b2bb640e0a042fbb84a predictions.json:0xbcc3385cc270430cb3d0fde911891b8a/predictions.json \"python evaluation.py TEST_GROUND_TRUTH.json predictions.json\" --request-cpus 1 --request-memory 2g --request-network",
+                "args": "run evaluation.py:0xde801b6bdaac4251a1715fd8208e445b TEST_GROUND_TRUTH.json:0x05f973d5ca674b2bb640e0a042fbb84a predictions.json:0xc7b7bc2cfee54fdea2fe77e6f968840c/predictions.json \"python evaluation.py TEST_GROUND_TRUTH.json predictions.json\" --request-cpus 1 --request-memory 2g --request-network",
                 "bundle_type": "run",
                 "command": "python evaluation.py TEST_GROUND_TRUTH.json predictions.json",
-                "data_hash": "0xea9925feeaad1f7b359e9dbb8c9979d05a10e177",
+                "data_hash": "0x057b791cb1543294fa0302558c13e22d0bb7ec39",
                 "dependencies": [
                     {
                         "child_path": "evaluation.py",
-                        "child_uuid": "0x3ee4f523903246f19b25c38d4c9148c5",
+                        "child_uuid": "0xb9788b8c2e074287ba953ef0c74ada1d",
                         "parent_name": "evaluation.py",
                         "parent_path": "",
                         "parent_uuid": "0xde801b6bdaac4251a1715fd8208e445b"
                     },
                     {
                         "child_path": "TEST_GROUND_TRUTH.json",
-                        "child_uuid": "0x3ee4f523903246f19b25c38d4c9148c5",
+                        "child_uuid": "0xb9788b8c2e074287ba953ef0c74ada1d",
                         "parent_name": "TEST_GROUND_TRUTH_v2.json",
                         "parent_path": "",
                         "parent_uuid": "0x05f973d5ca674b2bb640e0a042fbb84a"
                     },
                     {
                         "child_path": "predictions.json",
-                        "child_uuid": "0x3ee4f523903246f19b25c38d4c9148c5",
-                        "parent_name": "urvi_a-ROBERTA-base-HSLN-predict",
+                        "child_uuid": "0xb9788b8c2e074287ba953ef0c74ada1d",
+                        "parent_name": "urvi_a-LEGAL-BERT-base-HSLN-predict",
                         "parent_path": "predictions.json",
-                        "parent_uuid": "0xbcc3385cc270430cb3d0fde911891b8a"
+                        "parent_uuid": "0xc7b7bc2cfee54fdea2fe77e6f968840c"
                     }
                 ],
                 "frozen": null,
-                "id": "0x3ee4f523903246f19b25c38d4c9148c5",
+                "id": "0xb9788b8c2e074287ba953ef0c74ada1d",
                 "is_anonymous": false,
                 "metadata": {
                     "actions": [],
                     "allow_failed_dependencies": false,
                     "cpu_usage": 0.0,
-                    "created": 1644572330,
-                    "data_size": 4131,
-                    "description": "{\"submit_id\": \"0x5c9f6e973fe14d9a892b5ed277a32c5a\", \"submitter_id\": \"0x0b1b7be01b00448783ac85ced07ddf6f\", \"predict_id\": \"0xbcc3385cc270430cb3d0fde911891b8a\"}",
-                    "docker_image": "codalab/default-cpu@sha256:929b295ce9f35ec516e6be09a4543f1d3a5d3ab8908516863c3326c60aaaa723",
+                    "created": 1645518690,
+                    "data_size": 4442,
+                    "description": "{\"submit_id\": \"0xb52b0f2cf2f647288ec7ad8bcdb19f32\", \"submitter_id\": \"0x0b1b7be01b00448783ac85ced07ddf6f\", \"predict_id\": \"0xc7b7bc2cfee54fdea2fe77e6f968840c\"}",
+                    "docker_image": "codalab/default-cpu@sha256:0c87586892aac8b41c0aeb84d3e150608da15b29b76cd1d0292dcb7c4a97e1e1",
                     "exclude_patterns": [],
                     "exitcode": 0,
-                    "last_updated": 1644572762,
+                    "last_updated": 1645518926,
                     "memory_usage": 0.0,
-                    "name": "urvi_a-ROBERTA-base-HSLN-results",
+                    "name": "urvi_a-LEGAL-BERT-base-HSLN-results",
                     "remote": "dfa906186518-71151ce24b8140929e3f3882a9c0d6bc",
                     "request_cpus": 1,
                     "request_disk": "",
@@ -110,17 +110,17 @@
                     "request_queue": "",
                     "request_time": "",
                     "run_status": "Finished",
-                    "started": 1644572695,
+                    "started": 1645518858,
                     "store": "",
                     "tags": [
                         "competition-evaluate"
                     ],
-                    "time": 0.769147,
-                    "time_cleaning_up": 11.215407609939575,
-                    "time_preparing": 20.021843433380127,
-                    "time_running": 13.22192668914795,
+                    "time": 0.80221,
+                    "time_cleaning_up": 11.266831398010254,
+                    "time_preparing": 20.07252550125122,
+                    "time_running": 13.23827576637268,
                     "time_system": 0.0,
-                    "time_uploading_results": 22.430840969085693,
+                    "time_uploading_results": 22.46174120903015,
                     "time_user": 0.0
                 },
                 "owner": {
@@ -130,19 +130,19 @@
                 "permission": 2,
                 "permission_spec": "all",
                 "state": "ready",
-                "uuid": "0x3ee4f523903246f19b25c38d4c9148c5"
+                "uuid": "0xb9788b8c2e074287ba953ef0c74ada1d"
             },
             "scores": {
-                "Weighted-F1": 0.7695349719366913
+                "Weighted-F1": 0.7643933276543912
             },
             "submission": {
-                "created": 1644228204,
-                "description": "{\"model_name\":\"ROBERTA-base HSLN\", \"model_type\":\"SINGLE MODEL\", \"affiliation\":\"NONE\", \"paper_name\":\"NONE\", \"paper_link\":\"NONE\", \"code_link\":\"NONE\"}",
-                "num_period_submissions": 0,
+                "created": 1645512569,
+                "description": "{\"model_name\":\"LEGAL-BERT-base-HSLN\", \"model_type\":\"SINGLE MODEL\", \"affiliation\":\"NONE\", \"paper_name\":\"NONE\", \"paper_link\":\"NONE\", \"code_link\":\"NONE\"}",
+                "num_period_submissions": 1,
                 "num_total_submissions": 1,
                 "public": false,
                 "user_name": "urvi_a",
-                "model_name": "ROBERTA-base HSLN",
+                "model_name": "LEGAL-BERT-base-HSLN",
                 "model_type": "SINGLE MODEL",
                 "affiliation": "Anonymous",
                 "paper_name": "Anonymous",
@@ -151,5 +151,5 @@
             }
         }
     ],
-    "updated": 1645299594.3981793
+    "updated": 1645519061.0596354
 }
