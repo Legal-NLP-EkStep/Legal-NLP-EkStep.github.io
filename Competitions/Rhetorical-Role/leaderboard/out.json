@@ -138,7 +138,7 @@
             "submission": {
                 "created": 1645512569,
                 "description": "{\"model_name\":\"LEGAL-BERT-base-HSLN\", \"model_type\":\"SINGLE MODEL\", \"affiliation\":\"NONE\", \"paper_name\":\"NONE\", \"paper_link\":\"NONE\", \"code_link\":\"NONE\"}",
-                "num_period_submissions": 1,
+                "num_period_submissions": 0,
                 "num_total_submissions": 1,
                 "public": false,
                 "user_name": "urvi_a",
@@ -151,5 +151,5 @@
             }
         }
     ],
-    "updated": 1645519061.0596354
+    "updated": 1645904423.5319602
 }
