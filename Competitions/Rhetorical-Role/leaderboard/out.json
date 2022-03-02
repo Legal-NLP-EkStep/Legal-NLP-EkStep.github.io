@@ -56,50 +56,50 @@
     "leaderboard": [
         {
             "bundle": {
-                "args": "run evaluation.py:0xde801b6bdaac4251a1715fd8208e445b TEST_GROUND_TRUTH.json:0x05f973d5ca674b2bb640e0a042fbb84a predictions.json:0xc7b7bc2cfee54fdea2fe77e6f968840c/predictions.json \"python evaluation.py TEST_GROUND_TRUTH.json predictions.json\" --request-cpus 1 --request-memory 2g --request-network",
+                "args": "run evaluation.py:0xde801b6bdaac4251a1715fd8208e445b TEST_GROUND_TRUTH.json:0x05f973d5ca674b2bb640e0a042fbb84a predictions.json:0x83881e571cae465e92c01e0b070edd02/predictions.json \"python evaluation.py TEST_GROUND_TRUTH.json predictions.json\" --request-cpus 1 --request-memory 2g --request-network",
                 "bundle_type": "run",
                 "command": "python evaluation.py TEST_GROUND_TRUTH.json predictions.json",
-                "data_hash": "0x057b791cb1543294fa0302558c13e22d0bb7ec39",
+                "data_hash": "0x0153494f440931d7af44a4559ad623070a3380ed",
                 "dependencies": [
                     {
                         "child_path": "evaluation.py",
-                        "child_uuid": "0xb9788b8c2e074287ba953ef0c74ada1d",
+                        "child_uuid": "0x663338014e094c83b988ae3f71fa405e",
                         "parent_name": "evaluation.py",
                         "parent_path": "",
                         "parent_uuid": "0xde801b6bdaac4251a1715fd8208e445b"
                     },
                     {
                         "child_path": "TEST_GROUND_TRUTH.json",
-                        "child_uuid": "0xb9788b8c2e074287ba953ef0c74ada1d",
+                        "child_uuid": "0x663338014e094c83b988ae3f71fa405e",
                         "parent_name": "TEST_GROUND_TRUTH_v2.json",
                         "parent_path": "",
                         "parent_uuid": "0x05f973d5ca674b2bb640e0a042fbb84a"
                     },
                     {
                         "child_path": "predictions.json",
-                        "child_uuid": "0xb9788b8c2e074287ba953ef0c74ada1d",
+                        "child_uuid": "0x663338014e094c83b988ae3f71fa405e",
                         "parent_name": "urvi_a-LEGAL-BERT-base-HSLN-predict",
                         "parent_path": "predictions.json",
-                        "parent_uuid": "0xc7b7bc2cfee54fdea2fe77e6f968840c"
+                        "parent_uuid": "0x83881e571cae465e92c01e0b070edd02"
                     }
                 ],
                 "frozen": null,
-                "id": "0xb9788b8c2e074287ba953ef0c74ada1d",
+                "id": "0x663338014e094c83b988ae3f71fa405e",
                 "is_anonymous": false,
                 "metadata": {
                     "actions": [],
                     "allow_failed_dependencies": false,
                     "cpu_usage": 0.0,
-                    "created": 1645518690,
+                    "created": 1646224024,
                     "data_size": 4442,
-                    "description": "{\"submit_id\": \"0xb52b0f2cf2f647288ec7ad8bcdb19f32\", \"submitter_id\": \"0x0b1b7be01b00448783ac85ced07ddf6f\", \"predict_id\": \"0xc7b7bc2cfee54fdea2fe77e6f968840c\"}",
-                    "docker_image": "codalab/default-cpu@sha256:0c87586892aac8b41c0aeb84d3e150608da15b29b76cd1d0292dcb7c4a97e1e1",
+                    "description": "{\"submit_id\": \"0xa3aa73607ff14e219433a76c4b5d6345\", \"submitter_id\": \"0x0b1b7be01b00448783ac85ced07ddf6f\", \"predict_id\": \"0x83881e571cae465e92c01e0b070edd02\"}",
+                    "docker_image": "codalab/default-cpu@sha256:4a28d364988bdcbd7767b4a90223cb5d754120a1558a62915879a04837c251cf",
                     "exclude_patterns": [],
                     "exitcode": 0,
-                    "last_updated": 1645518926,
+                    "last_updated": 1646224314,
                     "memory_usage": 0.0,
                     "name": "urvi_a-LEGAL-BERT-base-HSLN-results",
-                    "remote": "dfa906186518-71151ce24b8140929e3f3882a9c0d6bc",
+                    "remote": "c8ff76646c0f-d685079ac8e5401fad179df225b67be7",
                     "request_cpus": 1,
                     "request_disk": "",
                     "request_docker_image": "",
@@ -110,17 +110,17 @@
                     "request_queue": "",
                     "request_time": "",
                     "run_status": "Finished",
-                    "started": 1645518858,
+                    "started": 1646224232,
                     "store": "",
                     "tags": [
                         "competition-evaluate"
                     ],
-                    "time": 0.80221,
-                    "time_cleaning_up": 11.266831398010254,
-                    "time_preparing": 20.07252550125122,
-                    "time_running": 13.23827576637268,
+                    "time": 0.682349,
+                    "time_cleaning_up": 3.168694019317627,
+                    "time_preparing": 60.090203046798706,
+                    "time_running": 3.0255110263824463,
                     "time_system": 0.0,
-                    "time_uploading_results": 22.46174120903015,
+                    "time_uploading_results": 8.767780065536499,
                     "time_user": 0.0
                 },
                 "owner": {
@@ -130,15 +130,15 @@
                 "permission": 2,
                 "permission_spec": "all",
                 "state": "ready",
-                "uuid": "0xb9788b8c2e074287ba953ef0c74ada1d"
+                "uuid": "0x663338014e094c83b988ae3f71fa405e"
             },
             "scores": {
-                "Weighted-F1": 0.7643933276543912
+                "Weighted-F1": 0.7560348840936255
             },
             "submission": {
-                "created": 1645512569,
+                "created": 1646139669,
                 "description": "{\"model_name\":\"LEGAL-BERT-base-HSLN\", \"model_type\":\"SINGLE MODEL\", \"affiliation\":\"NONE\", \"paper_name\":\"NONE\", \"paper_link\":\"NONE\", \"code_link\":\"NONE\"}",
-                "num_period_submissions": 0,
+                "num_period_submissions": 1,
                 "num_total_submissions": 1,
                 "public": false,
                 "user_name": "urvi_a",
@@ -151,5 +151,5 @@
             }
         }
     ],
-    "updated": 1645904423.5319602
+    "updated": 1646224384.0316997
 }
