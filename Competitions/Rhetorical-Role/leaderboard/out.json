@@ -138,7 +138,7 @@
             "submission": {
                 "created": 1648028332,
                 "description": "{\"model_name\":\"Updated  model\", \"model_type\":\"SINGLE\",\"affiliation\":\"NONE\", \"paper_name\":\"NONE\", \"paper_link\":\"NONE\", \"code_link\":\"NONE\"}",
-                "num_period_submissions": 1,
+                "num_period_submissions": 0,
                 "num_total_submissions": 2,
                 "public": false,
                 "user_name": "astha.agarwal",
@@ -247,5 +247,5 @@
             }
         }
     ],
-    "updated": 1648031480.468895
+    "updated": 1648323710.0254467
 }
