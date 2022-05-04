@@ -56,6 +56,106 @@
     "leaderboard": [
         {
             "bundle": {
+                "args": "run evaluation.py:0xde801b6bdaac4251a1715fd8208e445b TEST_GROUND_TRUTH.json:0x05f973d5ca674b2bb640e0a042fbb84a predictions.json:0xb33515af006e436d91947607528ea149/predictions.json \"python evaluation.py TEST_GROUND_TRUTH.json predictions.json\" --request-cpus 1 --request-memory 2g --request-network",
+                "bundle_type": "run",
+                "command": "python evaluation.py TEST_GROUND_TRUTH.json predictions.json",
+                "data_hash": "0xcc94f630bbd3768f8f0d902c6d9fc63ec17d7d3d",
+                "dependencies": [
+                    {
+                        "child_path": "evaluation.py",
+                        "child_uuid": "0xd79b8a59f330428d8e8e132f9d33ff78",
+                        "parent_name": "evaluation.py",
+                        "parent_path": "",
+                        "parent_uuid": "0xde801b6bdaac4251a1715fd8208e445b"
+                    },
+                    {
+                        "child_path": "TEST_GROUND_TRUTH.json",
+                        "child_uuid": "0xd79b8a59f330428d8e8e132f9d33ff78",
+                        "parent_name": "TEST_GROUND_TRUTH_v2.json",
+                        "parent_path": "",
+                        "parent_uuid": "0x05f973d5ca674b2bb640e0a042fbb84a"
+                    },
+                    {
+                        "child_path": "predictions.json",
+                        "child_uuid": "0xd79b8a59f330428d8e8e132f9d33ff78",
+                        "parent_name": "urvi_a-LEGAL-BERT-base-HSLN-predict",
+                        "parent_path": "predictions.json",
+                        "parent_uuid": "0xb33515af006e436d91947607528ea149"
+                    }
+                ],
+                "frozen": null,
+                "id": "0xd79b8a59f330428d8e8e132f9d33ff78",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "cpu_usage": 0.0,
+                    "created": 1651645567,
+                    "data_size": 4130,
+                    "description": "{\"submit_id\": \"0xdb7ff959d7e44eeaaf40f9fdfad76331\", \"submitter_id\": \"0x0b1b7be01b00448783ac85ced07ddf6f\", \"predict_id\": \"0xb33515af006e436d91947607528ea149\"}",
+                    "docker_image": "codalab/default-cpu@sha256:12025a6590e9bcde8fa1c03fe14587a3cd9ac253016e1ef255f6b4ade18a36f1",
+                    "exclude_patterns": [],
+                    "exitcode": 0,
+                    "last_updated": 1651646597,
+                    "memory_usage": 0.0,
+                    "name": "urvi_a-LEGAL-BERT-base-HSLN-results",
+                    "on_preemptible_worker": false,
+                    "remote": "9f104d187a3a-cc03fcb17df44f15ae8535a0f095453f",
+                    "remote_history": [
+                        "9f104d187a3a"
+                    ],
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": true,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "run_status": "Finished",
+                    "started": 1651646510,
+                    "store": "",
+                    "tags": [
+                        "competition-evaluate"
+                    ],
+                    "time": 0.649145,
+                    "time_cleaning_up": 0.04787945747375488,
+                    "time_preparing": 66.64064431190491,
+                    "time_running": 3.0255730152130127,
+                    "time_system": 0.0,
+                    "time_uploading_results": 7.27398157119751,
+                    "time_user": 0.0
+                },
+                "owner": {
+                    "id": "0xe493b1d3ae49408eaed3f9245510f0a7",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "ready",
+                "uuid": "0xd79b8a59f330428d8e8e132f9d33ff78"
+            },
+            "scores": {
+                "Weighted-F1": 0.795618383110016
+            },
+            "submission": {
+                "created": 1651584361,
+                "description": "{\"model_name\":\"LEGAL-BERT-base-HSLN\", \"model_type\":\"SINGLE MODEL\", \"affiliation\":\"NONE\", \"paper_name\":\"NONE\", \"paper_link\":\"NONE\", \"code_link\":\"NONE\"}",
+                "num_period_submissions": 1,
+                "num_total_submissions": 1,
+                "public": false,
+                "user_name": "urvi_a",
+                "model_name": "LEGAL-BERT-base-HSLN",
+                "model_type": "SINGLE MODEL",
+                "affiliation": "Anonymous",
+                "paper_name": "Anonymous",
+                "paper_link": "Anonymous",
+                "code_link": "Anonymous"
+            }
+        },
+        {
+            "bundle": {
                 "args": "run evaluation.py:0xde801b6bdaac4251a1715fd8208e445b TEST_GROUND_TRUTH.json:0x05f973d5ca674b2bb640e0a042fbb84a predictions.json:0x59038c33537b418c93f983daa4e21a7f/predictions.json \"python evaluation.py TEST_GROUND_TRUTH.json predictions.json\" --request-cpus 1 --request-memory 2g --request-network",
                 "bundle_type": "run",
                 "command": "python evaluation.py TEST_GROUND_TRUTH.json predictions.json",
@@ -150,104 +250,7 @@
                 "paper_link": "Anonymous",
                 "code_link": "Anonymous"
             }
-        },
-        {
-            "bundle": {
-                "args": "run evaluation.py:0xde801b6bdaac4251a1715fd8208e445b TEST_GROUND_TRUTH.json:0x05f973d5ca674b2bb640e0a042fbb84a predictions.json:0x83881e571cae465e92c01e0b070edd02/predictions.json \"python evaluation.py TEST_GROUND_TRUTH.json predictions.json\" --request-cpus 1 --request-memory 2g --request-network",
-                "bundle_type": "run",
-                "command": "python evaluation.py TEST_GROUND_TRUTH.json predictions.json",
-                "data_hash": "0x0153494f440931d7af44a4559ad623070a3380ed",
-                "dependencies": [
-                    {
-                        "child_path": "evaluation.py",
-                        "child_uuid": "0x663338014e094c83b988ae3f71fa405e",
-                        "parent_name": "evaluation.py",
-                        "parent_path": "",
-                        "parent_uuid": "0xde801b6bdaac4251a1715fd8208e445b"
-                    },
-                    {
-                        "child_path": "TEST_GROUND_TRUTH.json",
-                        "child_uuid": "0x663338014e094c83b988ae3f71fa405e",
-                        "parent_name": "TEST_GROUND_TRUTH_v2.json",
-                        "parent_path": "",
-                        "parent_uuid": "0x05f973d5ca674b2bb640e0a042fbb84a"
-                    },
-                    {
-                        "child_path": "predictions.json",
-                        "child_uuid": "0x663338014e094c83b988ae3f71fa405e",
-                        "parent_name": "urvi_a-LEGAL-BERT-base-HSLN-predict",
-                        "parent_path": "predictions.json",
-                        "parent_uuid": "0x83881e571cae465e92c01e0b070edd02"
-                    }
-                ],
-                "frozen": null,
-                "id": "0x663338014e094c83b988ae3f71fa405e",
-                "is_anonymous": false,
-                "metadata": {
-                    "actions": [],
-                    "allow_failed_dependencies": false,
-                    "cpu_usage": 0.0,
-                    "created": 1646224024,
-                    "data_size": 4442,
-                    "description": "{\"submit_id\": \"0xa3aa73607ff14e219433a76c4b5d6345\", \"submitter_id\": \"0x0b1b7be01b00448783ac85ced07ddf6f\", \"predict_id\": \"0x83881e571cae465e92c01e0b070edd02\"}",
-                    "docker_image": "codalab/default-cpu@sha256:4a28d364988bdcbd7767b4a90223cb5d754120a1558a62915879a04837c251cf",
-                    "exclude_patterns": [],
-                    "exitcode": 0,
-                    "last_updated": 1646224314,
-                    "memory_usage": 0.0,
-                    "name": "urvi_a-LEGAL-BERT-base-HSLN-results",
-                    "remote": "c8ff76646c0f-d685079ac8e5401fad179df225b67be7",
-                    "remote_history": [],
-                    "request_cpus": 1,
-                    "request_disk": "",
-                    "request_docker_image": "",
-                    "request_gpus": 0,
-                    "request_memory": "2g",
-                    "request_network": true,
-                    "request_priority": 0,
-                    "request_queue": "",
-                    "request_time": "",
-                    "run_status": "Finished",
-                    "started": 1646224232,
-                    "store": "",
-                    "tags": [
-                        "competition-evaluate"
-                    ],
-                    "time": 0.682349,
-                    "time_cleaning_up": 3.168694019317627,
-                    "time_preparing": 60.090203046798706,
-                    "time_running": 3.0255110263824463,
-                    "time_system": 0.0,
-                    "time_uploading_results": 8.767780065536499,
-                    "time_user": 0.0
-                },
-                "owner": {
-                    "id": "0xe493b1d3ae49408eaed3f9245510f0a7",
-                    "type": "users"
-                },
-                "permission": 2,
-                "permission_spec": "all",
-                "state": "ready",
-                "uuid": "0x663338014e094c83b988ae3f71fa405e"
-            },
-            "scores": {
-                "Weighted-F1": 0.7560348840936255
-            },
-            "submission": {
-                "created": 1646139669,
-                "description": "{\"model_name\":\"LEGAL-BERT-base-HSLN\", \"model_type\":\"SINGLE MODEL\", \"affiliation\":\"NONE\", \"paper_name\":\"NONE\", \"paper_link\":\"NONE\", \"code_link\":\"NONE\"}",
-                "num_period_submissions": 0,
-                "num_total_submissions": 1,
-                "public": false,
-                "user_name": "urvi_a",
-                "model_name": "LEGAL-BERT-base-HSLN",
-                "model_type": "SINGLE MODEL",
-                "affiliation": "Anonymous",
-                "paper_name": "Anonymous",
-                "paper_link": "Anonymous",
-                "code_link": "Anonymous"
-            }
         }
     ],
-    "updated": 1651347614.363287
+    "updated": 1651646629.5880103
 }
