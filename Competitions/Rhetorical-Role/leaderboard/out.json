@@ -141,17 +141,17 @@
             },
             "submission": {
                 "created": 1651584361,
-                "description": "{\"model_name\":\"LEGAL-BERT-base-HSLN\", \"model_type\":\"SINGLE MODEL\", \"affiliation\":\"NONE\", \"paper_name\":\"NONE\", \"paper_link\":\"NONE\", \"code_link\":\"NONE\"}",
-                "num_period_submissions": 1,
+                "description": "{\"model_name\":\"LEGAL-BERT-base-HSLN\", \"model_type\":\"SINGLE MODEL\", \"affiliation\":\"College of Engineering Pune\", \"paper_name\":\"NONE\", \"paper_link\":\"NONE\", \"code_link\":\"https://github.com/andipro123/rhetorical-role-baseline\"}",
+                "num_period_submissions": 0,
                 "num_total_submissions": 1,
-                "public": false,
+                "public": true,
                 "user_name": "urvi_a",
                 "model_name": "LEGAL-BERT-base-HSLN",
                 "model_type": "SINGLE MODEL",
-                "affiliation": "Anonymous",
+                "affiliation": "College of Engineering Pune",
                 "paper_name": "Anonymous",
                 "paper_link": "Anonymous",
-                "code_link": "Anonymous"
+                "code_link": "https://github.com/andipro123/rhetorical-role-baseline"
             }
         },
         {
@@ -252,5 +252,5 @@
             }
         }
     ],
-    "updated": 1651646629.5880103
+    "updated": 1651746795.6176097
 }
